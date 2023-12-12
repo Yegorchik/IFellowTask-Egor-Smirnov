@@ -19,7 +19,8 @@ public class FileSorter {
     private static final long memory = (long) (Runtime.getRuntime().freeMemory() * 0.8);
 
     public static void fileSorter(File dataFile) {
-        File outputFile = new File("data_sorted.txt");
+        String parentDirectory = dataFile.getParent();
+        File outputFile = new File(parentDirectory, "data_sorted.txt");
         List<Path> chunkPaths = new ArrayList<>();
         int chunkNum = 0;
 

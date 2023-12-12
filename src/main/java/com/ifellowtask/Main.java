@@ -9,10 +9,11 @@ public class Main {
         }
         String filePath = args[0];
         try {
-            long startTime = System.currentTimeMillis();
+            System.out.println("Сортировка началась");
+
             FileSorter.fileSorter(new File(filePath));
-            long timeElapsed = System.currentTimeMillis() - startTime;
-            System.out.println("Время: " + timeElapsed / 1000);
+
+            System.out.println("Строки отсортированы");
         } catch (OutOfMemoryError e) {
             throw new RuntimeException(e);
         }
