@@ -4,8 +4,10 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-
-        String filePath = "C:\\buhs\\IFellowTask-Egor-Smirnov\\data.txt";
+        if (args.length == 0) {
+            return;
+        }
+        String filePath = args[0];
         try {
             long startTime = System.currentTimeMillis();
             FileSorter.fileSorter(new File(filePath));
